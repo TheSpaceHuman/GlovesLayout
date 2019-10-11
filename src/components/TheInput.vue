@@ -1,7 +1,7 @@
 <template>
   <div class="input-wrapper">
     <el-input v-if="phone" v-mask="'+7 (XXX) XXX-XX-XX'" v-model="value" :name="name" :type="type" :placeholder="placeholder"></el-input>
-    <el-input v-else v-model="value" :name="name" :type="type" :placeholder="placeholder"></el-input>
+    <el-input v-else v-model="val" :name="name" :type="type" :placeholder="placeholder"></el-input>
   </div>
 </template>
 
@@ -25,8 +25,14 @@
       }
     },
     data() {
-      return {}
+      return {
+        val : ''
+      }
+    },
+    mounted() {
+      this.val = this.$props.value
     }
+
   }
 </script>
 

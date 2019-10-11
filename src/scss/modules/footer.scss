@@ -1,6 +1,6 @@
 .footer {
   padding-top: 72px;
-  padding-bottom: 147px;
+  padding-bottom: 70px;
   background-color: $secondary-color;
   @media screen and (max-width: $tableWidth) {
     padding-bottom: 40px;
@@ -63,7 +63,9 @@
   }
   @media screen and (max-width: $phoneWidth) {
     padding: 8px 5px;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   & .footer__right-block__menu__item:first-child {
     padding-left: 0;
@@ -73,9 +75,14 @@
   }
 
 }
-
+.footer__right-block__menu {
+  @media screen and (max-width: $phoneWidth) {
+    margin-bottom: 20px;
+  }
+}
 .footer__right-block__menu__item {
-  padding-left: 45px;
+  padding-left: 30px;
+  font-size: 16px;
   @media screen and (max-width: $phoneWidth) {
     padding: 8px 10px;
   }
@@ -131,6 +138,10 @@
 .footer__right-block__contact__content {
   text-align: right;
   font-size: 14px;
+  p {
+    line-height: 1.8;
+  }
+  //line-height: 1.8;
   @media screen and (max-width: $phoneWidth) {
     text-align: center;
   }
@@ -160,6 +171,9 @@
   font-size: 14px;
   font-weight: 400;
   text-align: right;
+  p {
+    line-height: 1.8;
+  }
   @media screen and (max-width: $phoneWidth) {
     text-align: center;
     margin-bottom: 40px;

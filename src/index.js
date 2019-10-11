@@ -13,7 +13,7 @@ requireAll(require.context('./icon', true, /\.svg$/));
 
 // import 'vue'
 // import Vue from 'vue'
-// import store from './store'
+import Store from './store'
 window.Vue = require('vue')
 
 // Components
@@ -25,6 +25,8 @@ Vue.component('TheModal', require('./components/TheModal.vue').default)
 Vue.component('TheCounter', require('./components/TheCounter.vue').default)
 Vue.component('TheSelect', require('./components/TheSelect.vue').default)
 Vue.component('TheInput', require('./components/TheInput.vue').default)
+Vue.component('ProductMetaData', require('./components/ProductMetaData.vue').default)
+Vue.component('ButtonBuyProduct', require('./components/ButtonBuyProduct.vue').default)
 
 
 // Plugins
@@ -54,5 +56,6 @@ Vue.use(Option)
 
 
 const app = new Vue({
-  el: '#app'
+  el: '#app',
+  store: Store
 })

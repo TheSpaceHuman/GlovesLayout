@@ -98,7 +98,7 @@
 }
 .products__item {
   margin-bottom: 17px;
-
+  border: 2px solid #edf3f6;
   &__content {
     padding: 15px;
     background-color: #edf3f6;
@@ -154,6 +154,10 @@
 }
 .price-banner {
   min-height: 624px;
+  .btn-secondary {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
   @media screen and (max-width: $tableWidth) {
     min-height: 400px;
   }
@@ -187,7 +191,7 @@
 }
 
 .directions {
-  margin-bottom: 170px;
+  margin-bottom: 100px;
   @media screen and (max-width: $phoneWidth) {
     margin-bottom: 20px;
   }
@@ -201,7 +205,11 @@
   &__item {
     display: flex;
     align-items: flex-start;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    margin-bottom: 70px;
+    @media screen and (max-width: $phoneWidth) {
+      flex-wrap: wrap;
+    }
   }
   &__item__title {
     font-size: 20px;
@@ -316,7 +324,7 @@
 }
 .right-block-item_title {
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   text-align: center;
   display: none;
